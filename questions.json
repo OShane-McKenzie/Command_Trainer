@@ -243,7 +243,7 @@
         {
           "command": "groupadd -f",
           "description": "Forces the creation of the group",
-          "question": "even if it already exists"
+          "question": "How to forces the creation of the group even if it already exists using the groupadd command?"
         },
         {
           "command": "find <path> -name <pattern>",
@@ -252,13 +252,13 @@
         },
         {
           "command": "find <path> -type <type>",
-          "description": "Filters the search results by file type (e.g.",
-          "question": "f for regular file"
+          "description": "Filters the search results by file type",
+          "question": "How to filter the search results by file type using the find command?"
         },
         {
           "command": "find <path> -size <size>",
-          "description": "Filters the search results by file size (e.g.",
-          "question": "+10M for files larger than 10 megabytes)"
+          "description": "Filters the search results by file size",
+          "question": "How to filter the search results by file size using the find command?"
         },
         {
           "command": "sed s/<pattern>/<replacement>/",
@@ -293,7 +293,7 @@
         {
           "command": "pvcreate -ff",
           "description": "Forces the creation of the physical volume",
-          "question": "even if it is already a physical volume"
+          "question": "How to force the creation of the physical volume even if it is already a physical volume?"
         },
         {
           "command": "pvcreate -y",
@@ -416,11 +416,6 @@
           "question": "How can I enable verbose output when using 'lvdisplay'?"
         },
         {
-          "command": "command",
-          "description": "description",
-          "question": "question"
-        },
-        {
           "command": "docker run <image>",
           "description": "Create container from local image else image will be downloaded before creating the container",
           "question": "What is the command to create and run a container from a Docker image?"
@@ -456,22 +451,22 @@
           "question": "How can I attach to a Docker container that is running in the background using its container ID?"
         },
         {
-          "command": "firewalld --state",
+          "command": "firewalld-cli --state",
           "description": "Shows the current state of the firewall",
           "question": "How can I check the current state of the firewall?"
         },
         {
-          "command": "firewalld --list-all",
+          "command": "firewalld-cli --list-all",
           "description": "Lists all the active firewall rules and zones",
           "question": "How can I view all the active firewall rules and zones?"
         },
         {
-          "command": "firewalld --add-service=<service>",
+          "command": "firewalld-cli --add-service=<service>",
           "description": "Adds a service to the firewall rules",
           "question": "What is the command to add a service to the firewall rules?"
         },
         {
-          "command": "firewalld --remove-service=<service>",
+          "command": "firewalld-cli --remove-service=<service>",
           "description": "Removes a service from the firewall rules",
           "question": "How can I remove a service from the firewall rules?"
         },
@@ -669,16 +664,6 @@
           "command": "find <path> -name <pattern>",
           "description": "Searches for files and directories with a specific name pattern",
           "question": "How can I search for files and directories with a specific name pattern using 'find' command?"
-        },
-        {
-          "command": "find <path> -type <type>",
-          "description": "Filters the search results by file type (e.g.",
-          "question": "f for regular file"
-        },
-        {
-          "command": "find <path> -size <size>",
-          "description": "Filters the search results by file size (e.g.",
-          "question": "+10M for files larger than 10 megabytes)"
         },
         {
           "command": "sed s/<pattern>/<replacement>/",
