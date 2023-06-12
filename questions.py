@@ -23,12 +23,12 @@ class Questions:
             answer = -1
             self.isQuizEnd = True
 
-        if str(string).strip()==answer:
-            self.score = score+1
+        if str(string).strip()==answer.strip():
+            self.score = self.score+1
             self.isCorrectAnswer=True
         else:
             self.isCorrectAnswer=False
-            self.correction = "Previous answer was incorrect. The correct answer is:\n"+self.question_list[index]["command"]+"\n"+self.question_list[index]["description"]
+            self.correction = "Previous answer was incorrect. The correct answer is:\n"+answer+"\n"+self.question_list[index]["description"]
         
         if self.isQuizEnd == True:
             self.score = (self.score/len(self.question_list))*100

@@ -663,7 +663,7 @@
         {
           "command": "groupadd -f",
           "description": "Forces the creation of the group",
-          "question": "even if it already exists"
+          "question": "How to force the creation of a group using the groupadd command even if it already exists"
         },
         {
           "command": "find <path> -name <pattern>",

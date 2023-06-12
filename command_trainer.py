@@ -89,8 +89,7 @@ class Ui_MainWindow(object):
         self.label.setText(self.text)
         self.label_2.setText(self.questionBank.progress)
     def submit(self):
-        self.questionBank.check_commands(self.plainTextEdit.toPlainText,self.thisQuestionIndex)
-
+        self.questionBank.check_commands(self.plainTextEdit.toPlainText(),self.thisQuestionIndex)
         if self.questionBank.isQuizEnd==False:
             self.thisQuestionIndex = self.thisQuestionIndex + 1
             text = self.question_list[self.thisQuestionIndex]["question"]
