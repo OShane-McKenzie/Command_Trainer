@@ -573,7 +573,7 @@
         {
           "command": "ssh -N",
           "description": "Requests a non-interactive session (useful for port forwarding)",
-          "question": "How can I request a non-interactive session using 'ssh'? When is it useful?"
+          "question": "How can I request a non-interactive session using 'ssh'?"
         },
         {
           "command": "systemctl start <service>",
