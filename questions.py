@@ -32,7 +32,7 @@ class Questions:
         
         if self.isQuizEnd == True:
             self.score = (self.score/len(self.question_list))*100
-            self.total = "You scored "+str(self.score)+"%"
+            self.total = "Score: "+str(self.score)+"%"
         
 
     def load_json_from_file(self,file_path):
