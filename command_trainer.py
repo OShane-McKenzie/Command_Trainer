@@ -1,4 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow
 import sys
 import json
@@ -19,6 +20,8 @@ class Ui_MainWindow(object):
         MainWindow.resize(800, 600)
         MainWindow.setFixedSize(800, 600)
         MainWindow.setAutoFillBackground(True)
+        self.app_icon = QIcon("cmd.png")
+        MainWindow.setWindowIcon(self.app_icon)
         self.questionBank = Questions()
         self.thisQuestionIndex = 0
         self.question_list = self.questionBank.getQuestions("questions.json")
