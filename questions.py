@@ -1,10 +1,26 @@
 import json
 import random
+import Levenshtein
+
+def is_approximately_equal(string1, string2, threshold):
+    def longest_common_subsequence(string1, string2):
+        lengths = [[0] * (len(string2) + 1) for _ in range(len(string1) + 1)]
+        for i, char1 in enumerate(string1):
+            for j, char2 in enumerate(string2):
+                if char1 == char2:
+                    lengths[i + 1][j + 1] = lengths[i][j] + 1
+                else:
+                    lengths[i + 1][j + 1] = max(lengths[i + 1][j], lengths[i][j + 1])
+        return lengths[-1][-1]
+
+    lcs_length = longest_common_subsequence(string1, string2)
+    similarity = (2.0 * lcs_length) / (len(string1) + len(string2))
+    return similarity >= threshold
 
 class Questions:
     def __init__(self):
         self.question_list = []
-        self.score = 0
+        self.score = 0.0
         self.progress = ""
         self.isQuizEnd = False
         self.isCorrectAnswer=False
@@ -26,6 +42,10 @@ class Questions:
         if str(string).strip()==answer.strip():
             self.score = self.score+1
             self.isCorrectAnswer=True
+        elif is_approximately_equal(str(string).strip(),answer.strip(),0.66):
+            self.correction = "Previous answer Partially Correct. The correct answer is:\n"+answer+"\n"+self.question_list[index]["description"]
+            self.score = self.score+0.5
+            self.isCorrectAnswer=False
         else:
             self.isCorrectAnswer=False
             self.correction = "Previous answer was incorrect. The correct answer is:\n"+answer+"\n"+self.question_list[index]["description"]
